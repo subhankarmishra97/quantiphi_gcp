@@ -1,0 +1,31 @@
+
+1) Create an instance A  in default VPC
+
+1-In the GCP console go to Compute Engine->VM instance and select create VM instances.
+3- Give a name to your instance , select region, zone and required machine conf.
+4-In the Networking select Network interface and select 'default' network.
+5- In Primary Internal IP' select 'Ephemeral'.
+6-Also in the 'External IP' section also select 'Ephemeral'.
+7- Click on 'Create instance' to create an instance.
+
+
+2)  Launch instance B with only private ip in default VPC in different zone.
+
+1- All steps are followed as in previous question except a different region is selected and the external IP is set to null so as to make the instance private.
+
+3) configure NAT so instance can access Internet.
+
+1-In Network service select Cloud NAT and select create.
+2-In the 'VPC network' select 'default'.
+3-Select an appropiate region.
+4-Create a cloud route.
+5- In the 'Source(internal)' section select 'Primary and secondary ranges for all subnets.'
+6-Select 'Automatic(recommended)' in the 'NAT IP addresses' section.
+7-Click on 'Create' to create a NAT gateway.
+
+
+4)SSH into Instance B using instance A and try to install nginx.
+Steps-
+1- SSH into instance A.
+2- Type 'ssh <instance B (private instance) private IP>' in the terminal of instance A. This command will take us to the terminal of instance B (private).
+3- Type 'sudo apt-get install nginx'.
