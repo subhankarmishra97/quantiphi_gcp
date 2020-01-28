@@ -1,0 +1,7 @@
+
+1.Enable Firewall rules logging.
+2. Click "Create Export" at the top of the "Logs Exports" page.
+3. Enter the "Sink name" and select BigQuery as sink service.
+4. In "Sink Destination" select  "BigQuery".
+5. Select dataset to receive the exported logs.
+6. Click "Update Sink" to create the sink.
