@@ -1,0 +1,6 @@
+Step 1- Create a bucket.
+Step 2- Upload a html script of the site you want to host on the bucket.
+Step 3- Select the folder and go to edit permission.
+Step 4- Click on add members.
+Step 5- In the new member field type alluser and in the role field select Storage object viewer.
+Step 6- Now click on save. Now the bucket is public and assessible through internet.
